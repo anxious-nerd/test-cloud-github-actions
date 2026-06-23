@@ -72,3 +72,5 @@ class ConfigurationManager:
             n_jobs=get_env("N_JOBS", 1),
             random_state=get_env("RANDOM_STATE", 42),
         )
+
+#editando comentario para triggerear el flow
