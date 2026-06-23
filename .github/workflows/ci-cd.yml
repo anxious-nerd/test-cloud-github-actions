@@ -3,7 +3,7 @@ name: N-jobs testing pipeline
 on:
   push:
     branches:
-      - main #cambiado acá porque en el repo test se está usando main
+      - test-(métricas)
     paths:
       - src/config/config.py
   workflow_dispatch:
@@ -53,17 +53,22 @@ jobs:
             models/preprocessor.pkl
             reports/
 
-      - name: Check Model Improvement
-        id: check_model
-        env:
-          PYTHONPATH: ${{ github.workspace }}
-        run: python src/utils/model_check.py
+#todo comentado para que no edite el modelo
 
-      - name: Commit and Push improved model
-        if: steps.check_model.outcome == 'success' && github.ref == 'refs/heads/main'
+      #- name: Check Model Improvement
+      #  id: check_model
+      #  env:
+      #    PYTHONPATH: ${{ github.workspace }}
+      #  run: python src/utils/model_check.py 
+
+      - name: Commit and Push
+      #  if: steps.check_model.outcome == 'success' && github.ref == 'refs/heads/main'
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add models/model.pkl models/preprocessor.pkl reports/
-          git diff --cached --quiet || git commit -m "build: deploy improved model (recall threshold met)"
+          git add reports/
+          git diff --cached --quiet || git commit -m "build: deploy NEW njobs model (recall threshold met)"
           git push
+
+
+  # git add models/model.pkl models/preprocessor.pkl reports/
