@@ -3,7 +3,7 @@ name: N-jobs testing pipeline
 on:
   push:
     branches:
-      -  main
+      - main #cambiado acá porque en el repo test se está usando main
     paths:
       - src/config/config.py
   workflow_dispatch:

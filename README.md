@@ -1,6 +1,3 @@
- git clone --single-branch --branch "test-(métricas)"  https://github.com/fabrizziomcl/hp3c-cibersecml.git
-
-
 # Intelligent Antivirus: HPC and MLOps Pipeline
 
 Este repositorio implementa una infraestructura avanzada para la deteccion de malware mediante tecnicas de Machine Learning, optimizada con High Performance Computing (HPC) y gestionada bajo un ciclo de vida MLOps robusto. El sistema permite el entrenamiento paralelo de modelos, automatizacion de despliegues y monitoreo de rendimiento de hardware.
