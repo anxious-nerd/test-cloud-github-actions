@@ -73,4 +73,4 @@ class ConfigurationManager:
             random_state=get_env("RANDOM_STATE", 42),
         )
 
-#editando comentario para triggerear el workflow 
+#editando comentario para triggerear el workflow
