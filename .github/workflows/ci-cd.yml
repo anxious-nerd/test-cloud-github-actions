@@ -3,7 +3,7 @@ name: N-jobs testing pipeline
 on:
   push:
     branches:
-      - test-(métricas)
+      - main
     paths:
       - src/config/config.py
   workflow_dispatch:
