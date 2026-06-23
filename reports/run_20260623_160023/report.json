@@ -1,0 +1,58 @@
+{
+    "schema_version": 2,
+    "metadata": {
+        "report_id": "REP-076a5c4c",
+        "timestamp": "2026-06-23 16:00:32",
+        "model_name": "Random Forest Classifier",
+        "parameters": {
+            "n_estimators": 100,
+            "max_depth": 12,
+            "n_jobs": 4,
+            "random_state": 42
+        }
+    },
+    "dataset": {
+        "total_rows": 46523,
+        "class_distribution": {
+            "0": 23389,
+            "1": 23134
+        },
+        "train_size": 37218,
+        "test_size": 9305
+    },
+    "hpc_performance": {
+        "time_seq": 0.004010696999998231,
+        "time_par": 1.5204540959999946,
+        "speedup": 0.002637828403073502,
+        "efficiency": 0.0006594571007683755,
+        "num_workers": 4
+    },
+    "training_hpc_performance": {
+        "sequential_time": 3.010539137000009,
+        "parallel_time": 1.0323142419999982,
+        "speedup": 2.9163010782137544,
+        "efficiency": 0.7290752695534386,
+        "cores_used": 4
+    },
+    "model_performance": {
+        "train": {
+            "accuracy": 0.9998656564028159,
+            "precision": 0.9998379079317052,
+            "recall": 0.9998919327821906,
+            "f1_score": 0.9998649196271782,
+            "roc_auc": 0.9999999740098081
+        },
+        "test": {
+            "accuracy": 0.999247716281569,
+            "precision": 0.9997836434443964,
+            "recall": 0.9987032634536417,
+            "f1_score": 0.9992431614228565,
+            "roc_auc": 0.9999454380126389
+        },
+        "cv": {
+            "cv_recall_mean": 0.9984870414073261,
+            "cv_recall_std": 0.00036655646311294006,
+            "cv_folds": 5
+        }
+    }
+}
