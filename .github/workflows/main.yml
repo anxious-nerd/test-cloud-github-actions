@@ -1,0 +1,12 @@
+name: Check CPU Cores
+on: [push]
+
+jobs:
+  check-cores:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check CPU cores using nproc
+        run: nproc
+
+      - name: Check CPU cores using lscpu
+        run: lscpu | grep '^CPU(s):'
