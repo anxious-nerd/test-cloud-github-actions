@@ -55,7 +55,7 @@ class ConfigurationManager:
                 get_env("PREPROCESSOR_PATH", "models/preprocessor.pkl")
             ),
             pca_components=get_env("PCA_COMPONENTS", 3),
-            num_workers=get_env("HPC_NUM_WORKERS", 4),
+            num_workers=get_env("HPC_NUM_WORKERS", 1),
             force_imbalance=get_env("FORCE_IMBALANCE", False),
             random_state=get_env("RANDOM_STATE", 42),
         )
